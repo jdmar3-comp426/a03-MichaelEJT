@@ -28,9 +28,8 @@ export function identifyVariable(variable) {
 export function identifyArray(array) {
    let ret = [];
    array.forEach(element => {
-      let ret2 = [];
-      ret2.push(`type: ${typeof element}`);
-      ret2.push(`value: ${element}`);
+      let ret2 = {type: typeof element,
+         value: element}
       ret.push(ret2);
    })
    return ret;
@@ -103,8 +102,9 @@ export function removeKeyNonDestructive(object, key) {
  * @return {*} The object with its keys removed.
  */
 export function removeKeys(object, keyList) {
+   let obj = Object.assign({},object);
    keyList.forEach(element => {
-      delete object[element];
+      delete obj[element];
    })
    return object;
 }
