@@ -75,7 +75,7 @@ return true;
  If only `removeKeyNonDestructive` was called, nothing would have changed.
  */
 export function removeKeyNonDestructive(object, key) {
-   let obj = object;
+   let obj = Object.assign({},object);
    delete obj[key];
    return obj;
    
