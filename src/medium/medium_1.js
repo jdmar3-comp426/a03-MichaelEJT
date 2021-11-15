@@ -51,7 +51,7 @@ export function getMedian(arr) {
  }
  */
 export function getStatistics(array) {
-    let statistics = [];
+    /* let statistics = [];
     statistics.push('length: ' + array.length);
     statistics.push('sum: ' + getSum(array));
     let mean = getSum(array) / array.length;
@@ -61,6 +61,28 @@ export function getStatistics(array) {
     statistics.push('max: '+ Math.max(...array));
     statistics.push('vairance: '+ variance(array, mean));
     statistics.push('standard_deviation: '+ Math.sqrt(variance(array, mean)));
+    return statistics; */
+
+    /* let statistics = {length: , sum: getSum(array), mean: getSum(array) / array.length,
+         median: getMedian(array), min: Math.min(...array),
+          max: Math.max(...array), variance: variance(array,getSum(array) / array.length ),
+           standard_deviation = Math.sqrt(variance(array,getSum(array) / array.length ))}; */
+    /* statistics.length = array.length;
+    statistics.sum = getSum(array);
+    statistics.mean = getSum(array) / array.length;
+    statistics.median = getMedian(array);
+    statistics.min = Math.min(...array);
+    statistics.max = Math.max(...array);
+    statistics.variance = variance(array, statistics.mean);
+    statistics.standard_deviation = Math.sqrt(statistics.variance); */
+    var statistics = {};
+    statistics.sum = array.length;
+    statistics.mean = getSum(array) / array.length;
+    statistics.median = getMedian(array);
+    statistics.min = Math.min(...array);
+    statistics.max = Math.max(...array);
+    statistics.variance = variance(array, statistics.mean);
+    statistics.standard_deviation = Math.sqrt(statistics.variance);
     return statistics;
 
 }

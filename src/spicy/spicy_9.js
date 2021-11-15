@@ -31,7 +31,7 @@ export const repeatDemo = () => {
     repeat(console.log, 10, "Hello, world!")
 };
 
-
+//
 /**************************************************************************
  *
  * Function currying
