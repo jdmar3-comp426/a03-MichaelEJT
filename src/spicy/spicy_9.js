@@ -65,7 +65,7 @@ export const tenTimes = multiplyBy(10);
 export const tenTimesFifty = () => {
     tenTimes(50);
 };
-
+//
 
 /**************************************************************************
  *
