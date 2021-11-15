@@ -32,4 +32,9 @@ console.log(removeKeyNonDestructive(obj,'age'));
 import { removeKeys } from "./src/mild/mild_2.js";
 console.log("Testing removekeys");
 console.log(removeKeys(obj,["title","password"]));
-
+import { getMedian, getSum } from "./src/medium/medium_1.js";
+console.log("Testing getmedian");
+console.log(getMedian([3,2,5,6,2,7,4,2,7,5]))
+import { getStatistics } from "./src/medium/medium_1.js";
+console.log("Testing getStatistics");
+console.log(getStatistics([3,2,4,5,5,5,2,6,7]));
