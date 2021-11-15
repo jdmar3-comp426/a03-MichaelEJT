@@ -52,15 +52,15 @@ export function getMedian(arr) {
  */
 export function getStatistics(array) {
     let statistics = [];
-    statistics.push('length: ',array.length);
-    statistics.push('sum: ',getSum(array));
+    statistics.push('length: ' + array.length);
+    statistics.push('sum: ' + getSum(array));
     let mean = getSum(array) / array.length;
-    statistics.push('mean: ', mean);
-    statistics.push('median: ', getMedian(array));
-    statistics.push('min:', Math.min(...array));
-    statistics.push('max: ', Math.max(...array));
-    statistics.push('vairance: ', variance(array, mean));
-    statistics.push('standard_deviation: ', Math.sqrt(variance(array, mean)));
+    statistics.push('mean: '+ mean);
+    statistics.push('median: '+ getMedian(array));
+    statistics.push('min:'+ Math.min(...array));
+    statistics.push('max: '+ Math.max(...array));
+    statistics.push('vairance: '+ variance(array, mean));
+    statistics.push('standard_deviation: '+ Math.sqrt(variance(array, mean)));
     return statistics;
 
 }
