@@ -23,6 +23,7 @@ export const allCarStats = {
     avgMpg: undefined,
     allYearStats: undefined,
     ratioHybrids: undefined,
+    
 };
 
 
