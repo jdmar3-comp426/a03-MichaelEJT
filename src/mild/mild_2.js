@@ -106,5 +106,5 @@ export function removeKeys(object, keyList) {
    keyList.forEach(element => {
       delete obj[element];
    })
-   return object;
+   return obj;
 }
