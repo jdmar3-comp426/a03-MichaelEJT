@@ -76,7 +76,8 @@ export function getStatistics(array) {
     statistics.variance = variance(array, statistics.mean);
     statistics.standard_deviation = Math.sqrt(statistics.variance); */
     var statistics = {};
-    statistics.sum = array.length;
+    statistics.length = array.length;
+    statistics.sum = getSum(array);
     statistics.mean = getSum(array) / array.length;
     statistics.median = getMedian(array);
     statistics.min = Math.min(...array);
