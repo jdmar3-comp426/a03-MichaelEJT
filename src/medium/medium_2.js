@@ -54,7 +54,6 @@ export const allCarStats = {
             if (hyb[i] == true) {
                 y++;
             }
-            
         }
         let ret = y / hyb.length;
         return ret;
