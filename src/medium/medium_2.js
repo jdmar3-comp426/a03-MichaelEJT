@@ -40,7 +40,7 @@ export const allCarStats = {
         var hwyMpgAverage = getStatistics(hwyMpg).mean;
         var cityMpgAverage = getStatistics(cityMpg).mean;
         const mpg = {city: cityMpgAverage, highway:hwyMpgAverage};
-        allCarStats.avgMpg = ret;
+        allCarStats.avgMpg = mpg;
         allCarStats.allYearStats = getStatistics(years);
         allCarStats.ratioHybrids = hybrids / mpg_data.length;
 
