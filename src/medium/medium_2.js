@@ -24,6 +24,26 @@ export const allCarStats = {
     allYearStats: undefined,
     ratioHybrids: undefined,
 };
+        const cityMpg = [];
+        const hwyMpg = [];
+        const years = [];
+        let hybrids = 0;
+        mpg_data.forEach(car => {
+            cityMpg.push(car.city_mpg);
+            hwyMpg.push(car.highway_mpg);
+            years.push(car.year);
+            if (car.hybrid) {
+                hybrids++;
+            }
+        });
+        
+        var hwyMpgAverage = getStatistics(hwyMpg).mean;
+        var cityMpgAverage = getStatistics(cityMpg).mean;
+        const mpg = {city: cityMpgAverage, highway:hwyMpgAverage};
+        allCarStats.avgMpg = mpg;
+        allCarStats.allYearStats = getStatistics(years);
+        allCarStats.ratioHybrids = hybrids / mpg_data.length;
+
 
 
 /**
